@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJoYXJib3IuZWR1LmNuIjogewoJCQkiYXV0aCI6ICJZMjR5TURJd01ETTZZMjR5TURJd01ETT0iCgkJfSwKCQkiaHR0cHM6Ly9pbmRleC5kb2NrZXIuaW8vdjEvIjogewoJCQkiYXV0aCI6ICJjR3QxYmpwc2FUSXdNREJqYUhWdSIKCQl9Cgl9LAoJIkh0dHBIZWFkZXJzIjogewoJCSJVc2VyLUFnZW50IjogIkRvY2tlci1DbGllbnQvMTguMDkuOC1jZSAobGludXgpIgoJfQp9
+kind: Secret
+metadata:
+  name: mytoken
+type: kubernetes.io/dockerconfigjson

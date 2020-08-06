@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cn
+  name: cn
+  namespace: cn202003
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cn
+  template:
+    metadata:
+      labels:
+        app: cn
+    spec:
+      containers:
+      - image: harbor.edu.cn/cn202003/cn:lastest
+        imagePullPolicy: IfNotPresent
+        name: cn
+        ports:
+        - containerPort: 8088
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: mytoken
