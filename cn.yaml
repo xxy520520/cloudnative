@@ -20,7 +20,8 @@ spec:
         imagePullPolicy: IfNotPresent
         name: cn
         ports:
-        - containerPort: 8088
+        - name: cloud
+          containerPort: 8088
       restartPolicy: Always
       imagePullSecrets:
       - name: mytoken
