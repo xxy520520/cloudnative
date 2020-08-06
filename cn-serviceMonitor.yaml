@@ -4,10 +4,12 @@ metadata:
   name: cn
   labels:
     k8s-app: cn
+    namespace: cn202003
 spec:
   endpoints:
     - interval: 30s
       port: cloud
+      path: /actuator/prometheus
       scheme: https
   jobLabel:  cloudnative202003
   namespaceSelector:
