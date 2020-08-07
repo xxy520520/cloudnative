@@ -21,11 +21,11 @@ spec:
         app: cn
     spec:
       containers:
-      - image: harbor.edu.cn/cn202003/cn:lastest
+      - image: harbor.edu.cn/cn202003/cn:{VERSION} #lastest
         imagePullPolicy: IfNotPresent
         name: cn
         ports:
-        - name: cloud
+        - name: tcp
           containerPort: 8088
       restartPolicy: Always
       imagePullSecrets:

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: cn
   labels:
     app: cn
-  name: cn
   namespace: cn202003
 spec:
   ports:
-  - name: cloud
+  - name: tcp
     protocol: TCP
     port: 8088
     targetPort: 8088

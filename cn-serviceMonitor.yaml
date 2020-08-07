@@ -4,15 +4,13 @@ metadata:
   name: cn
   labels:
     k8s-app: cn
-    release: prometheus-operator
   namespace: monitoring
 spec:
   endpoints:
     - interval: 30s
-      port: cloud
+      port: tcp
       path: /actuator/prometheus
       scheme: 'http'
-  jobLabel:  cloudnative202003
   namespaceSelector:
     matchNames:
       - cn202003                #目标服务的namespaces
