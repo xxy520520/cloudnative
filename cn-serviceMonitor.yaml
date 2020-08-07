@@ -3,8 +3,9 @@ kind: ServiceMonitor
 metadata:
   name: cn
   labels:
-    prometheus: kube-prometheus
     k8s-app: cn
+    prometheus: kube-prometheus
+    release: prometheus-operator
   namespace: monitoring
 spec:
   endpoints:
