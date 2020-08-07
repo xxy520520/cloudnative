@@ -1,9 +1,9 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: cn
+  name: cloud-service
   labels:
-    k8s-app: cn
+    k8s-app: cloud-service
   namespace: monitoring
 spec:
   endpoints:
@@ -16,4 +16,4 @@ spec:
       - cn202003                #目标服务的namespaces
   selector:
     matchLabels:
-      app: cn               #目标服务的labels
+      app: cloud-service               #目标服务的labels

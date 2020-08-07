@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cn
+  name: cloud-service
   labels:
-    app: cn
+    app: cloud-service
   namespace: cn202003
 spec:
   ports:
@@ -12,5 +12,5 @@ spec:
     port: 8088
     targetPort: 8088
   selector:
-    app: cn
+    app: cloud-service
   type: NodePort
