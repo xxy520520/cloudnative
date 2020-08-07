@@ -11,7 +11,7 @@ spec:
     - interval: 30s
       port: cloud
       path: /actuator/prometheus
-      scheme: https
+      scheme: http
   jobLabel:  cloudnative202003
   namespaceSelector:
     matchNames:
