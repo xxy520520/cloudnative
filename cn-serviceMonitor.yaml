@@ -4,7 +4,8 @@ metadata:
   name: cn
   labels:
     k8s-app: cn
-    namespace: cn202003
+    release: cloudnative
+  namespace: monitoring
 spec:
   endpoints:
     - interval: 30s
