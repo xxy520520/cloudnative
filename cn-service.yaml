@@ -11,6 +11,7 @@ spec:
     protocol: TCP
     port: 8088
     targetPort: 8088
+    nodePort: 30478
   selector:
     app: cn
   type: NodePort

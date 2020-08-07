@@ -11,11 +11,12 @@ spec:
   endpoints:
     - interval: 30s
       port: cloud
-      scheme: http
+      path: /actuator/prometheus
+      scheme: 'http'
   jobLabel:  cloudnative202003
   namespaceSelector:
     matchNames:
       - cn202003                #目标服务的namespaces
   selector:
     matchLabels:
-      k8s-app: cn               #目标服务的labels
+      app: cn               #目标服务的labels

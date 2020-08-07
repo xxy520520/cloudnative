@@ -12,6 +12,11 @@ spec:
       app: cn
   template:
     metadata:
+      annotations:
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8088"
+        prometheus.io/scheme: http
+        prometheus.io/scrape: "true"
       labels:
         app: cn
     spec:
