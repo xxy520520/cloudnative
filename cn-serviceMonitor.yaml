@@ -3,14 +3,13 @@ kind: ServiceMonitor
 metadata:
   name: cn
   labels:
+    prometheus: kube-prometheus
     k8s-app: cn
-    release: cloudnative
   namespace: monitoring
 spec:
   endpoints:
     - interval: 30s
       port: cloud
-      path: /actuator/prometheus
       scheme: http
   jobLabel:  cloudnative202003
   namespaceSelector:
