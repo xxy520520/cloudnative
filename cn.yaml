@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: cloud-service
-  name: cloud-service
+    app: cn
+  name: cn
   namespace: cn202003
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cloud-service
+      app: cn
   template:
     metadata:
       annotations:
@@ -18,10 +18,10 @@ spec:
         prometheus.io/scheme: http
         prometheus.io/scrape: "true"
       labels:
-        app: cloud-service
+        app: cn
     spec:
       containers:
-      - image: harbor.edu.cn/cn202003/cloud-service:lastest #lastest
+      - image: harbor.edu.cn/cn202003/cn:lastest #lastest
         imagePullPolicy: IfNotPresent
         name: cloud-service
         ports:
