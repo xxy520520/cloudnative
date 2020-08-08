@@ -21,7 +21,7 @@ spec:
         app: cloud-service
     spec:
       containers:
-      - image: harbor.edu.cn/cn202003/cloud-service:{VERSION} #lastest
+      - image: harbor.edu.cn/cn202003/cloud-service:lastest #lastest
         imagePullPolicy: IfNotPresent
         name: cloud-service
         ports:
